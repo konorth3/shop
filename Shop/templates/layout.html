@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='card.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    {% endblock %}
+</head>
+<body class="my">
+    <header class="navbar navbar-expand navbar-dark flex-column bg-dark flex-md-row bd-navbar">
+        <div class="mr-auto p-2 bd-highlight">
+            <ul class="navbar-nav  ml-md-auto">
+                {% block navbar %}{% endblock %}
+            </ul>
+        </div>
+        <div class="p-2 bd-highlight">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="шукати" aria-label="Search">
+            </form>
+        </div>
+    </header>
+    <div class="bg-dark main">
+        <a href="/">
+            <img src="/static/logo.jpg" width="100%" alt="">
+        </a>
+        <div class="d-flex bd-highlight mb-3 navbar-dark">
+            <div class="mr-auto p-2 bd-highlight"></div>
+            {% block main %}
+            {% endblock %}
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

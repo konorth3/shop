@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block title %}
+    Магазин
+{% endblock %}
+{% block navbar %}
+<a class="nav-item nav-link " href="{{ url_for('basket') }}">корзина</a>
+<a class="nav-item nav-link" href="{{ url_for('about') }}">про нас</a>
+<a class="nav-item nav-link" href="{{ url_for('blog') }}">блог</a>
+<a class="nav-item nav-link" href="{{ url_for('reviews') }}">відгуки</a>
+<a class="nav-item nav-link" href="{{ url_for('contacts') }}">контакти</a>
+<a class="nav-item nav-link" href="{{ url_for('delivery') }}">оплата та доставка</a>
+{% endblock %}
+{% block main %}
+<div class="p-2 bd-highlight">
+    <a class="nav-item nav-link" href="{{ url_for('top_diсk') }}">топ хуї</a>
+</div>
+<div class="p-2 bd-highlight">
+    <a class="nav-item nav-link" href="{{ url_for('red_diсk') }}">червоні хуї</a>
+</div>
+<div class="p-2 bd-highlight">
+    <a class="nav-item nav-link" href="{{ url_for('blak_diсk') }}">чорні хуї</a>
+</div>
+{% endblock %}
+{% block content %}
+<ul class="my">
+    <li class="my">
+        <a href="/">
+            <img src="/static/tpd.jpg" width="100%">
+        </a>
+    </li>
+    <li class="my">
+        <a href="/">
+            <img src="/static/bld.jpg" width="100%">
+        </a>
+    </li>
+    <li class="my">
+        <a href="/">
+            <img src="/static/rdd.jpg" width="100%">
+        </a>
+    </li>
+    <li class="my">
+        <a href="/">
+            <img src="/static/bld2.jpg" width="100%">
+        </a>
+    </li>
+    <li class="my">
+        <a href="/">
+            <img src="/static/tpd2.jpg" width="100%">
+        </a>
+    </li>
+</ul>
+{% endblock %}

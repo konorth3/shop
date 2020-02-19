@@ -1,0 +1,51 @@
+body.my {
+    background: #676767;
+}
+ul.my{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+li.my {
+    list-style: none;
+    margin-left: 0 !important;
+}
+ul.my:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+ul.my li.my {
+    position: relative;
+    float: left;
+    width: 20%;
+    margin-right: 3.8%;
+    margin-bottom: 1.618em;
+    text-align: center;
+}
+table .my {
+    /*height: 1000px;  Высота блока 
+    width: 1000px;
+    background: #4cff00;
+    margin: 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-bottom: 50px;
+    border-bottom-color: brown;
+    border-left: 50px;
+    padding: 10px;*/
+}
+tr.my {
+    background: #ff0000;
+    border-left: 50px;
+}
+td.my {
+    height: 200px; /* Высота блока */
+    width: 200px; /* Ширина блока */
+    overflow: auto; /* Добавляем полосы прокрутки */
+    border-left: 25px;
+    padding-left:10px;
+    background: #0026ff;
+}
